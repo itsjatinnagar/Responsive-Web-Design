@@ -1,0 +1,5 @@
+# TODO's
+*.txt
+
+# VS Code Settings
+.vscode/
