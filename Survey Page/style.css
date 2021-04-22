@@ -1,0 +1,148 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--theme-background: hsl(0, 0%, 0%);
+	--theme-text: hsl(0, 0%, 100%);
+	--primary-background: hsla(24, 38%, 47%, 0.7);
+	--primary-text: #4a4a4a;
+
+	--button: hsl(17, 32%, 35%);
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	height: 100vh;
+	width: 100%;
+	font-family: sans-serif;
+	font-size: 1.6rem;
+	background: linear-gradient(115deg, hsla(10, 22%, 21%, 0.686), hsla(17, 32%, 35%, 0.624)), url('survey_bg.jpg') no-repeat center/cover;
+	background-attachment: fixed;
+	color: var(--theme-text);
+}
+
+#title {
+	padding: 5rem 0 1.4rem 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 3.8rem;
+	font-weight: normal;
+	text-align: center;
+}
+
+#description {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2.2rem;
+	font-style: italic;
+	text-align: center;
+}
+
+#survey-form {
+	width: 72rem;
+	margin: 3rem auto 1rem auto;
+	background-color: var(--primary-background);
+	border-radius: 1rem;
+	padding: 5rem 4rem;
+	font-size: 1.8rem;
+}
+
+::placeholder,
+option:disabled,
+#survey-form > input,
+#survey-form > select,
+#survey-form > textarea {
+	color: var(--primary-text);
+}
+
+#survey-form > label,
+#survey-form > input,
+#survey-form > select,
+#survey-form > textarea,
+#survey-form > button {
+	display: block;
+	width: 100%;
+}
+
+#survey-form label {
+	margin-bottom: 1.3rem;
+}
+
+#survey-form > input,
+#survey-form > select,
+#survey-form > select,
+#survey-form > textarea {
+	margin-bottom: 2.6rem;
+	padding: 0.8rem;
+	font-size: 1.8rem;
+	border: 1.5px solid transparent;
+}
+
+#survey-form label[for='dropdown2'],
+#survey-form label[for='comment'] {
+	margin-top: 1.2rem;
+}
+
+#survey-form > input:focus,
+#survey-form > select:focus,
+#survey-form > textarea:focus {
+	outline: none;
+	border-color: hsl(10, 22%, 21%);
+	box-shadow: 0 0 6px 2px rgba(10, 10, 10, 0.3);
+}
+
+#survey-form select option:not(:disabled) {
+	color: var(--theme-background);
+}
+
+#survey-form > div input {
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+}
+
+#survey-form > div label {
+	display: inline-block;
+	margin-left: 0.6rem;
+	vertical-align: top;
+	width: calc(100% - 3.2rem);
+}
+
+#survey-form textarea {
+	resize: vertical;
+	min-height: 12rem;
+}
+
+#survey-form button {
+	background-color: var(--button);
+	color: var(--theme-text);
+	border: none;
+	border-radius: 0.4rem;
+	height: 4rem;
+	font-size: 1.7rem;
+	cursor: pointer;
+	transition: background-color 0.2s linear;
+}
+
+#survey-form button:hover {
+	background-color: hsl(10, 22%, 21%);
+}
+
+/* Media Queries (Breakpoints) */
+
+@media (max-width: 765px) {
+	#survey-form {
+		max-width: 54rem;
+		width: 100%;
+	}
+}
+
+@media (max-width: 575px) {
+	#survey-form {
+		max-width: 100%;
+	}
+}
