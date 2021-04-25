@@ -93,7 +93,6 @@ body {
 }
 
 #submit {
-	margin-bottom: 2rem;
 	padding: 0.6rem 1.4rem;
 	font-weight: 600;
 }
@@ -104,12 +103,14 @@ body {
 }
 
 #features-wrapper {
-	margin: 8rem 0;
+	padding-top: 10rem;
 	width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 5rem;
 }
 
 .feature {
-	margin-bottom: 5rem;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -139,17 +140,18 @@ body {
 }
 
 #howitworks {
+    padding-top: 10rem;
 	width: 100%;
 }
 
 #video {
 	display: block;
-	margin: 40px auto 60px;
+	margin: auto;
 	max-width: 100%;
 }
 
 #pricing {
-	padding: 1rem;
+	padding: 10rem 1rem 1rem;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 2rem;
