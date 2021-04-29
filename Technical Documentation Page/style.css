@@ -1,0 +1,136 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--theme-background: #000;
+	--theme-text: #fff;
+	--primary-background: #222;
+	--primary-text: #eee;
+	--code-text: #098658;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	background-color: var(--primary-background);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+
+h1,
+h2 {
+	font-weight: 500;
+}
+
+a {
+	color: var(--theme-text);
+}
+
+#navbar {
+	background-color: var(--primary-background);
+	border-right: 4px solid var(--theme-background);
+	width: 30rem;
+	height: 100vh;
+	position: fixed;
+	overflow-y: auto;
+	top: 0;
+	left: 0;
+}
+
+#navbar h1 {
+	width: 30rem;
+	height: 80px;
+	line-height: 80px;
+	position: fixed;
+	background-color: var(--theme-background);
+	color: var(--theme-text);
+	font-size: 2.6rem;
+	text-align: center;
+}
+
+#navbar ul {
+	height: calc(100% - 80px);
+	margin-top: 80px;
+	overflow-y: auto;
+}
+
+#navbar ul li {
+	padding: 12px 30px;
+	border-top: 1px solid var(--theme-background);
+}
+
+#navbar ul li a {
+	display: block;
+	font-size: 1.6rem;
+	color: var(--theme-text);
+	text-decoration: none;
+}
+
+#main-doc {
+	margin: 4rem 2rem 4rem 34rem;
+}
+
+#main-doc h2 {
+	font-size: 2.8rem;
+	margin: 20px auto;
+	color: var(--primary-text);
+}
+
+#main-doc p,
+#main-doc ul li {
+	font-size: 1.6rem;
+	margin: 2rem 0.8rem 2rem 1.6rem;
+	color: var(--primary-text);
+}
+
+#main-doc ul {
+	margin-left: 7rem;
+}
+
+#main-doc code {
+	margin-left: 40px;
+	padding: 20px;
+	display: block;
+    font-family: 'Courier New', Courier, monospace;
+	font-size: 1.4rem;
+    font-weight: bold;
+	background-color: var(--theme-text);
+	color: var(--code-text);
+	border-radius: 6px;
+}
+
+#reference {
+	margin-bottom: 14rem;
+}
+
+@media (max-width: 875px) {
+	html {
+		font-size: 9px;
+	}
+	#navbar {
+		width: 100%;
+		height: 316px;
+		position: absolute;
+		border: none;
+	}
+	#navbar h1 {
+		width: 100%;
+		position: absolute;
+	}
+	#navbar ul {
+		border: 2px solid var(--theme-background);
+	}
+	#navbar ul li {
+		border-top: none;
+		border-bottom: 1px solid var(--theme-background);
+	}
+	#main-doc {
+		margin: 40rem 2rem 0;
+	}
+}
